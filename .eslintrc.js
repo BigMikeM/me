@@ -1,17 +1,4 @@
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'prettier',
-    'prettier/react',
-    'airbnb',
-    'plugin:prettier/recommended'
-  ],
+module.exports = { // eslint-disable-line unicorn/prefer-module
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -19,11 +6,33 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', 'prettier'],
-  rules: {},
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  plugins: ['simple-import-sort'],
   settings: {
     react: {
       version: 'detect'
     }
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:security/recommended',
+    'plugin:react-hooks/recommended'
+  ],
+  rules: {
+    'no-console': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'unicorn/filename-case': 'off'
   }
 }
