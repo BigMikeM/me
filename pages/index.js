@@ -1,6 +1,7 @@
 import Head from 'next/head'
+import { Motion, presets, spring } from 'react-motion'
+
 import styles from '../styles/Home.module.scss'
-import { Motion, spring, presets } from 'react-motion'
 
 export default function Home() {
   return (
