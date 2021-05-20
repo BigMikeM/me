@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   env: {
     browser: true,
     es2021: true,
@@ -7,6 +7,9 @@ export default {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'prettier',
+    'prettier/react',
+    'airbnb',
     'plugin:prettier/recommended'
   ],
   parserOptions: {
